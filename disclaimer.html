@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer | Energy Revolution System</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables - Blueprint & Energy Theme */
+        :root {
+            --primary: #1E3A8A; /* Deep Blue */
+            --primary-dark: #0F172A; /* Slate Navy */
+            --accent: #F59E0B; /* Electric Amber */
+            --accent-hover: #D97706; 
+            --bg-main: #F8FAFC;
+            --bg-white: #FFFFFF;
+            --bg-alt: #EFF6FF; /* Very Light Blue */
+            --text-dark: #0F172A;
+            --text-body: #334155;
+            --text-light: #64748B;
+            --border-color: #E2E8F0;
+            --success: #10B981;
+            --danger: #EF4444;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --radius: 8px;
+        }
+
+        /* Reset & Base Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color: var(--text-body); line-height: 1.6; }
+        h1, h2, h3, h4, h5 { color: var(--text-dark); line-height: 1.25; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        ul { list-style: none; }
+        p { margin-bottom: 1.25rem; }
+        
+        /* Layout Utilities */
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .legal-container { max-width: 800px; margin: 4rem auto; background: var(--bg-white); padding: 3.5rem; border-radius: var(--radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); }
+        
+        /* Typography for Legal Pages */
+        .legal-container h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--primary-dark); }
+        .legal-container h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1.25rem; color: var(--primary); border-bottom: 2px solid var(--bg-alt); padding-bottom: 0.5rem; }
+        .legal-container p { font-size: 1.05rem; color: var(--text-body); margin-bottom: 1.25rem; }
+        .legal-container ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; }
+        .legal-container li { margin-bottom: 0.5rem; font-size: 1.05rem; color: var(--text-body); }
+        .last-updated { color: var(--text-light); font-size: 0.95rem; margin-bottom: 2.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Navigation */
+        .navbar { position: sticky; top: 0; background: var(--bg-white); box-shadow: var(--shadow-sm); z-index: 1000; padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+        .nav-brand span { color: var(--accent); }
+        .nav-links { display: none; gap: 2rem; align-items: center; font-weight: 600; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .menu-btn { display: block; font-size: 1.75rem; background: none; border: none; cursor: pointer; color: var(--primary); }
+        .btn-primary { background-color: var(--accent); color: var(--primary-dark); padding: 0.75rem 1.5rem; border-radius: var(--radius); font-weight: 700; transition: all 0.3s ease; box-shadow: var(--shadow-md); }
+        .btn-primary:hover { background-color: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-lg); color: var(--primary-dark); }
+        
+        /* Mobile Menu */
+        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-white); padding: 1.5rem; box-shadow: var(--shadow-md); flex-direction: column; gap: 1.25rem; border-top: 1px solid var(--border-color); }
+        .mobile-menu.active { display: flex; }
+        @media(min-width: 992px) { .nav-links { display: flex; } .menu-btn { display: none; } }
+        @media(max-width: 768px) { .legal-container { padding: 2rem 1.5rem; margin: 2rem auto; } }
+
+        /* Footer */
+        footer { background: var(--primary-dark); color: #94A3B8; padding: 4rem 0 2rem; font-size: 0.9rem; margin-top: 4rem; }
+        .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
+        .footer-nav a { color: var(--bg-white); font-weight: 600; }
+        .footer-nav a:hover { color: var(--accent); }
+        .disclaimer-footer { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: justify; font-size: 0.8rem; line-height: 1.5; }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Energy<span>Revolution</span></a>
+            <div class="nav-links">
+                <a href="index.html#problem">The Problem</a>
+                <a href="index.html#what-it-is">What It Is</a>
+                <a href="index.html#caveat">Honest Caveat</a>
+                <a href="index.html#pricing" class="btn-primary">Get Blueprint</a>
+            </div>
+            <button class="menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html#problem">The Problem</a>
+            <a href="index.html#what-it-is">What It Is</a>
+            <a href="index.html#caveat">Honest Caveat</a>
+            <a href="index.html#pricing" class="btn-primary" style="display: inline-block; text-align: center;">Get Blueprint</a>
+        </div>
+    </nav>
+
+    <!-- Disclaimer Content -->
+    <main class="container">
+        <div class="legal-container">
+            <h1>Disclaimer</h1>
+            <p class="last-updated">Last Updated: November 6, 2026</p>
+
+            <p>The information provided by the Energy Revolution System website and within the digital guide is for general informational and educational purposes only. All information on the site is provided in good faith; however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site or within the product.</p>
+
+            <h2>1. Product Nature & Technical Assessment</h2>
+            <p>The Energy Revolution System is a <strong>digital DIY blueprint and video guide</strong>. It is not a physical generator, and no hardware is shipped to you.</p>
+            <p><strong>Crucial Notice:</strong> As stated in the vendor's own official terms, the device described in these blueprints <strong>"is an experiment, it was not technically assessed."</strong> It has not been approved, tested, reviewed, or certified by any regulatory body, independent engineering firm, or laboratory. You are undertaking an experimental hobbyist project at your own risk.</p>
+
+            <h2>2. Safety and Electrical Disclaimer</h2>
+            <p>Working with electricity, wiring, soldering equipment, and magnetic components is inherently dangerous and can lead to severe injury, electrocution, property damage, fire, or death. </p>
+            <ul>
+                <li>The creators and publishers of this guide are not licensed electricians, nor do they claim to be.</li>
+                <li>The material in this guide should not be construed as professional electrical advice.</li>
+                <li>You should consult with a licensed, certified electrician before attempting any electrical build, and especially before attempting to connect any home-built device to your existing household wiring or grid.</li>
+                <li>You are solely responsible for ensuring your project complies with all local, state, and national electrical codes and building regulations.</li>
+            </ul>
+
+            <h2>3. Earnings, Output, and Savings Disclaimer</h2>
+            <p>Any claims made on this website or in promotional materials regarding potential energy output, reduced utility bills, or financial savings (e.g., "save 80% on bills" or "5x output") are <strong>strictly for promotional purposes and are not supported by independent engineering testing</strong>.</p>
+            <p>We do not guarantee that you will save money or generate a specific amount of electricity. Independent reviews suggest realistic results are limited to modest supplemental power for small, constant-load devices (e.g., LED lights, routers, phone chargers). The device violates no laws of physics and <strong>does not create "free energy"</strong>; it requires an input source to function and cannot output more energy than is put into it (Conservation of Energy).</p>
+
+            <h2>4. Pen Name and Testimonials Disclosure</h2>
+            <p>Please note that the author of the Energy Revolution System, "Michael Garnett," is a pen name used to protect the author's anonymity. Testimonials and reviews presented on our sales pages may be dramatized or utilize stock photography, and are intended to represent the author's claims regarding the potential of the system. They do not represent guaranteed or typical results.</p>
+
+            <h2>5. Limitation of Liability</h2>
+            <p>Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site. Your use of the site and your reliance on any information on the site is solely at your own risk. By purchasing this guide, you agree to fully indemnify and hold harmless the creators, publishers, and affiliates of the Energy Revolution System from any legal claims, damages, or injuries resulting from your DIY build.</p>
+
+            <h2>6. Third-Party Retailer (ClickBank)</h2>
+            <p>The Energy Revolution System is sold through ClickBank, a third-party retailer. ClickBank's role as a retailer does not constitute an endorsement, approval, or review of these products or any claim, statement, or opinion used in promotion of these products. All requests for refunds must be processed in accordance with ClickBank's 60-day refund policy.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="index.html#what-it-is">What It Is</a>
+                <a href="index.html#caveat">Honest Caveat</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="#">Disclaimer</a>
+            </div>
+            
+            <div class="disclaimer-footer">
+                <p><strong>Disclaimer:</strong> This product is a digital DIY guide, not a finished generator. It does not create free energy, eliminate electricity bills, or replace grid power. The sales page’s output and savings claims are not supported by independent testing. The author is credited under a pen name. Results vary based on build quality, components, and load.</p>
+                <p>Working with electrical components carries risk; consult a licensed electrician and local authorities before any home electrical alteration. Testimonials and reported themes reflect individual experiences and are not intended to represent typical results. Pricing and refund terms should be confirmed against the official Energy Revolution System website at the time of purchase. This page presents both the commercial terms and the engineering limitations so you can decide with clear eyes. It is not electrical advice.</p>
+                <p class="text-center" style="margin-top: 2rem;">© 2026 Energy Revolution System.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuBtn.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu on click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuBtn.textContent = '☰';
+            });
+        });
+    </script>
+</body>
+</html>

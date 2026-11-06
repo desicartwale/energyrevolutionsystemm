@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Revolution System | Official DIY Blueprint</title>
+	<meta name="description" content="Energy Revolution System™: a $39 DIY guide for homeowners and hands-on learners exploring electrical efficiency and a compact Tesla-inspired project.">
+	<meta name="keywords" content="Energy Revolution System, Energy Revolution System review, Energy Revolution System guide, DIY energy project, DIY coil generator, Tesla-inspired energy project, Tesla bifilar coil, household energy use, electrical efficiency guide, supplemental power project, DIY supplemental power, home energy DIY guide, coil winding tutorial, magnet alignment guide, energy independence project, preparedness energy project, hands-on electrical project, home energy efficiency, DIY power device, Michael Garnett Energy Revolution System, Energy Revolution System price, Energy Revolution System scam, Energy Revolution System refund">
+
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables - Blueprint & Energy Theme */
+        :root {
+            --primary: #1E3A8A; /* Deep Blue */
+            --primary-dark: #0F172A; /* Slate Navy */
+            --accent: #F59E0B; /* Electric Amber */
+            --accent-hover: #D97706; 
+            --bg-main: #F8FAFC;
+            --bg-white: #FFFFFF;
+            --bg-alt: #EFF6FF; /* Very Light Blue */
+            --text-dark: #0F172A;
+            --text-body: #334155;
+            --text-light: #64748B;
+            --border-color: #E2E8F0;
+            --success: #10B981;
+            --danger: #EF4444;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --radius: 8px;
+        }
+
+        /* Reset & Base Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color: var(--text-body); line-height: 1.6; }
+        h1, h2, h3, h4, h5 { color: var(--text-dark); line-height: 1.25; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+        p { margin-bottom: 1.25rem; }
+        
+        /* Layout Utilities */
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .py-section { padding-top: 5rem; padding-bottom: 5rem; }
+        .bg-white { background-color: var(--bg-white); }
+        .bg-alt { background-color: var(--bg-alt); }
+        .bg-dark { background-color: var(--primary-dark); color: white; }
+        .bg-dark h2, .bg-dark h3, .bg-dark h4 { color: white; }
+        .bg-dark p { color: #CBD5E1; }
+        
+        /* Grid System */
+        .grid-2, .grid-3 { display: grid; gap: 2rem; }
+        @media(min-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr 1fr; align-items: center; }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* Buttons */
+        .btn { display: inline-flex; justify-content: center; align-items: center; padding: 1rem 2rem; border-radius: var(--radius); font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: all 0.2s ease; border: 2px solid transparent; text-align: center; }
+        .btn-primary { background-color: var(--accent); color: var(--primary-dark); box-shadow: var(--shadow-md); }
+        .btn-primary:hover { background-color: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-lg); color: var(--primary-dark); }
+        .btn-outline { background-color: transparent; border-color: var(--primary); color: var(--primary); }
+        .btn-outline:hover { background-color: var(--primary); color: white; transform: translateY(-2px); }
+        .btn-block { display: flex; width: 100%; }
+
+        /* Lists */
+        .check-list li { position: relative; padding-left: 2rem; margin-bottom: 0.75rem; font-weight: 600; color: var(--text-dark); }
+        .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 800; font-size: 1.2rem; }
+        .x-list li { position: relative; padding-left: 2rem; margin-bottom: 0.75rem; color: var(--text-body); }
+        .x-list li::before { content: '✕'; position: absolute; left: 0; color: var(--danger); font-weight: 800; font-size: 1.2rem; top: -2px; }
+
+        /* Navigation */
+        .navbar { position: sticky; top: 0; background: var(--bg-white); box-shadow: var(--shadow-sm); z-index: 1000; padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+        .nav-brand span { color: var(--accent); }
+        .nav-links { display: none; gap: 2rem; align-items: center; font-weight: 600; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .menu-btn { display: block; font-size: 1.75rem; background: none; border: none; cursor: pointer; color: var(--primary); }
+        
+        /* Mobile Menu */
+        .mobile-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-white); padding: 1.5rem; box-shadow: var(--shadow-md); flex-direction: column; gap: 1.25rem; border-top: 1px solid var(--border-color); }
+        .mobile-menu.active { display: flex; }
+        @media(min-width: 992px) {
+            .nav-links { display: flex; }
+            .menu-btn { display: none; }
+        }
+
+        /* Hero */
+        .hero { padding: 5rem 0 6rem; background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg-white) 100%); overflow: hidden; }
+        .hero h1 { font-size: 2.25rem; margin-bottom: 1.5rem; color: var(--primary-dark); }
+        .hero-lead { font-size: 1.125rem; color: var(--text-body); margin-bottom: 2rem; }
+        @media(min-width: 768px) { .hero h1 { font-size: 3rem; } }
+
+        /* UI Cards */
+        .card { background: var(--bg-white); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; }
+        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: #BFDBFE; }
+        .icon-lg { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+        
+        /* Caveat Box (Pros/Cons) */
+        .caveat-box { border-radius: var(--radius); padding: 2.5rem; height: 100%; }
+        .box-green { background-color: #F0FDF4; border: 1px solid #BBF7D0; border-top: 4px solid var(--success); }
+        .box-red { background-color: #FEF2F2; border: 1px solid #FECACA; border-top: 4px solid var(--danger); }
+        .box-green h3 { color: #166534; }
+        .box-red h3 { color: #991B1B; }
+
+        /* Timeline */
+        .timeline-step { display: flex; gap: 1.5rem; margin-bottom: 2rem; background: var(--bg-white); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border-color); position: relative; overflow: hidden; }
+        .timeline-step::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); }
+        .step-number { flex-shrink: 0; width: 48px; height: 48px; background: var(--bg-alt); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem; }
+
+        /* Pricing Box */
+        .pricing-box { background: var(--bg-white); border: 2px solid var(--primary); border-radius: var(--radius); padding: 3rem 2rem; text-align: center; max-width: 500px; margin: 0 auto; position: relative; box-shadow: var(--shadow-lg); }
+        .pricing-badge { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 0.5rem 1.5rem; border-radius: 30px; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+        .price-wrap { margin: 1.5rem 0 2rem; display: flex; justify-content: center; align-items: baseline; gap: 0.5rem; }
+        .price { font-size: 4rem; font-weight: 800; color: var(--primary-dark); line-height: 1; letter-spacing: -0.03em; }
+        .price-strike { text-decoration: line-through; color: var(--text-light); font-size: 1.5rem; font-weight: 600; }
+        .pricing-list { text-align: left; margin: 0 auto 2rem; max-width: 400px; }
+        
+        /* Guarantee Box */
+        .guarantee-box { background-color: #FFFBEB; border: 1px solid #FDE68A; border-left: 6px solid var(--accent); border-radius: var(--radius); padding: 2.5rem; display: flex; flex-direction: column; md:flex-row; gap: 1.5rem; align-items: center; margin-top: 3rem; text-align: left; }
+        @media(min-width: 768px) { .guarantee-box { flex-direction: row; } }
+
+        /* FAQ Accordion */
+        .faq-item { border-bottom: 1px solid var(--border-color); }
+        .faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; padding: 1.5rem 0; font-size: 1.1rem; font-weight: 700; color: var(--text-dark); cursor: pointer; text-align: left; }
+        .faq-icon { font-size: 1.5rem; color: var(--primary); font-weight: 300; transition: transform 0.3s ease; }
+        .faq-question.active .faq-icon { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-answer-inner { padding-bottom: 1.5rem; color: var(--text-body); }
+
+        /* Review Quotes */
+        .review-quote { border-left: 4px solid var(--accent); padding-left: 1.5rem; margin-bottom: 2rem; }
+        .review-quote p { font-size: 1.1rem; font-style: italic; color: var(--text-dark); margin-bottom: 0.5rem; }
+        .review-source { font-size: 0.9rem; color: var(--text-light); font-weight: 600; }
+
+        /* Placeholders */
+        .placeholder-img { background: #E2E8F0; border-radius: var(--radius); width: 100%; display: flex; align-items: center; justify-content: center; color: #64748B; font-weight: 600; padding: 2rem; box-shadow: var(--shadow-sm); border: 2px dashed #CBD5E1; text-align: center; }
+
+        /* Footer */
+        footer { background: var(--primary-dark); color: #94A3B8; padding: 4rem 0 2rem; font-size: 0.9rem; }
+        .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
+        .footer-nav a { color: var(--bg-white); font-weight: 600; }
+        .footer-nav a:hover { color: var(--accent); }
+        .disclaimer { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: justify; font-size: 0.8rem; line-height: 1.5; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-brand">Energy<span>Revolution</span></a>
+            <div class="nav-links">
+                <a href="#problem">The Problem</a>
+                <a href="#what-it-is">What It Is</a>
+                <a href="#caveat">Honest Caveat</a>
+                <a href="#timeline">The Build</a>
+                <a href="order.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem;">Order Now</a>
+            </div>
+            <button class="menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#problem">The Problem</a>
+            <a href="#what-it-is">What It Is</a>
+            <a href="#caveat">Honest Caveat</a>
+            <a href="#timeline">The Build</a>
+            <a href="order.html" class="btn btn-primary btn-block">Order Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container grid-2">
+            <div>
+                <h1>Build a Supplemental Power Project With the Energy Revolution System</h1>
+                <p class="hero-lead">A step-by-step blueprint and video guide for constructing a small, coil-based device that can offload low-draw appliances from the grid. No subscription. No shipped hardware. Just a project you build yourself, for roughly $50–$200 in parts.</p>
+                
+                <ul class="x-list" style="margin-bottom: 2rem;">
+                    <li>Your electric bill climbs every year, and the utility company is not offering you a vote.</li>
+                    <li>You have looked at solar, gotten a quote, and closed the tab when you saw the number.</li>
+                    <li>You want some measure of energy independence—or at least a backup for the essentials.</li>
+                    <li>You have tried “energy-saving” gadgets that did nothing except light up an LED and collect dust.</li>
+                </ul>
+
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#pricing" class="btn btn-primary">Get the Blueprint Today →</a>
+                </div>
+                
+                <ul class="check-list" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li>$39 One-Time Digital Guide</li>
+                    <li>60-Day Money-Back Guarantee (ClickBank)</li>
+                    <li>Step-by-Step PDF + Video Tutorials</li>
+                    <li>Parts Sourced from Local Hardware Stores</li>
+                </ul>
+            </div>
+            <div>
+                <!-- Hero Image Placeholder -->
+                <div class="placeholder-img" style="aspect-ratio: 4/3;">
+                    <img src="images/energy-revolution-system-product.webp">Energy Revolution System</img><br>Energy Revolution System Guide Cover<br>& Coil Diagram
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section id="problem" class="py-section bg-white">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
+                <h2>Why “Just Pay the Bill” Is Not a Plan</h2>
+                <p>Energy costs do not announce themselves with drama. They show up in small, quiet line items that you learn to accept—until the acceptance becomes its own kind of frustration. Here is what that looks like.</p>
+            </div>
+            
+            <div class="grid-3 mb-2">
+                <div class="card">
+                    <span class="icon-lg">⚡</span>
+                    <h4>The bill that only goes one direction</h4>
+                    <p>You have cut back on heating, switched to LEDs, unplugged the spare fridge—and the number still creeps up.</p>
+                </div>
+                <div class="card">
+                    <span class="icon-lg">☀️</span>
+                    <h4>The solar quote that ended the conversation</h4>
+                    <p>You looked into panels, got a number with five digits, and quietly decided it was not for you.</p>
+                </div>
+                <div class="card">
+                    <span class="icon-lg">🔌</span>
+                    <h4>The outage that reminded you how exposed you are</h4>
+                    <p>A storm knocked out power for six hours, and you realized your router, your phone, your medical device, your fridge—all of it depends on a grid you do not control.</p>
+                </div>
+                <div class="card">
+                    <span class="icon-lg">🧰</span>
+                    <h4>The gadget graveyard</h4>
+                    <p>You bought a “power saver” that plugged into the wall, promised miracles, and did nothing measurable.</p>
+                </div>
+                <div class="card">
+                    <span class="icon-lg">📚</span>
+                    <h4>The information overload</h4>
+                    <p>You have watched YouTube videos, read forum threads, and still are not sure what is real and what is marketing.</p>
+                </div>
+                <div class="card">
+                    <span class="icon-lg">😔</span>
+                    <h4>The quiet sense that the system is rigged</h4>
+                    <p>Rates go up, incentives favor installers, and the average homeowner is left holding the bill.</p>
+                </div>
+            </div>
+
+            <div class="card bg-alt" style="margin-top: 3rem; border: none;">
+                <p style="font-weight: 700; color: var(--text-dark);">Here is the part that often goes unsaid.</p>
+                <p>Most home energy “solutions” are either expensive (solar, battery walls, standby generators) or useless (plug-in miracle boxes). There is a middle ground that rarely gets marketed: <strong>small-scale, DIY supplemental power</strong>—a project that will not run your air conditioner, but can meaningfully offload the constant, low-draw devices that run 24/7.</p>
+                <p>That is the gap the Energy Revolution System was built to address—not by promising free energy or a wiped-out bill, but by giving you a blueprint for a hands-on project that teaches you how a coil-based circuit works and what it can realistically power.</p>
+                <p><em>One independent reviewer who tested the product described it best as “a low-cost DIY learning project and possible supplemental-power experiment—not a magic device that eliminates a household electricity bill”.</em></p>
+            </div>
+            
+            <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div class="placeholder-img" style="aspect-ratio: 21/9;">
+                    <img src="images/energy-revolution-system-product.webp"> </img><br>Coil and Magnet Assembly Diagram
+                </div>
+                <p class="text-center" style="margin-top: 1rem; font-weight: 600; color: var(--primary);">Digital blueprint | ~$50–$200 in parts | 60-day guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What It Is -->
+    <section id="what-it-is" class="py-section bg-dark">
+        <div class="container grid-2">
+            <div>
+                <h2>Meet the Energy Revolution System</h2>
+                <p>The Energy Revolution System is a <strong>digital DIY guide</strong>, not a physical generator. When you purchase it, you receive access to a main PDF blueprint, diagrams and schematics, a parts and materials list, and video tutorials for the tricky parts—coil winding and magnet alignment.</p>
+                
+                <p>The project itself is a coil-based electrical circuit inspired by Nikola Tesla’s bifilar coil patent (U.S. Patent No. 512,340, filed in 1894). The sales page frames it as a “forgotten” or suppressed invention, but the honest version is simpler: Tesla’s patent describes a <em>winding method for electromagnets</em> that changes the coil’s electrical properties—it does not describe a generator, and the patent has always been publicly available. What the guide teaches you to build is an experimental circuit that can supplement power for small devices.</p>
+                
+                <h4 style="margin-top: 2rem;">What it can realistically power:</h4>
+                <p>Reviewers who have built and tested it report output limited to LED lights and small devices. Constant, low-draw loads like a router, phone chargers, or a small fan are the realistic ceiling.</p>
+
+                <h4 style="margin-top: 1.5rem; color: #FCA5A5;">What it cannot power:</h4>
+                <p>Central air conditioning, electric water heaters, large ovens, refrigerators, or an entire home. The sales page’s “80% savings” claim is not supported by any independent testing. One reviewer who tested it directly concluded that treating a short evaluation as proof it can replace utility power would be a mistake. No lab test or independent engineering review of the design appears in the available sources.</p>
+
+                <h4 style="margin-top: 1.5rem;">What it is not:</h4>
+                <p>It is not a plug-and-play generator. It is not free energy. A coil can transfer, store, or shape electrical energy from another source—it cannot produce more energy than goes into it. That is conservation of energy, and no consumer product has overturned it.</p>
+            </div>
+            <div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="margin-bottom: 1.5rem;">Inside the Guide: What You Actually Get</h3>
+                    <ul class="check-list" style="margin-bottom: 2rem;">
+                        <li style="color: white;"><strong>The Main PDF Blueprint:</strong> Step-by-step written instructions covering material gathering, component preparation, and final assembly, with diagrams showing component placement and wiring.</li>
+                        <li style="color: white;"><strong>The Parts and Materials List:</strong> An itemized checklist of affordable components—copper wire, coils, magnets, simple housing materials—with guidance on sourcing them locally.</li>
+                        <li style="color: white;"><strong>Video Tutorials:</strong> Visual walkthroughs for coil winding and magnet alignment, the two steps where precision matters most.</li>
+                        <li style="color: white;"><strong>60-day money-back guarantee</strong> through ClickBank</li>
+                        <li style="color: white;"><strong>One-time payment</strong>—no subscription</li>
+                    </ul>
+                    <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: var(--radius); border-left: 4px solid var(--accent);">
+                        <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>A note on difficulty:</strong> The sales page says anyone can build it in an afternoon. Independent reviews and user reports paint a more varied picture. Some builders report completing a first build in 3–6 hours with basic tools; others describe spending 12 working hours over two weekends. The honest expectation is a weekend project with a real learning curve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honest Caveat Section -->
+    <section id="caveat" class="py-section bg-alt">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
+                <h2>The Honest Caveat: What The Evidence Supports</h2>
+                <p>Most DIY energy guides skip this section. This one will not, because electricity is not a category where you want to be misled.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="caveat-box box-red bg-white">
+                    <h3>What the Energy Revolution System does NOT do:</h3>
+                    <ul class="x-list" style="margin-top: 1.5rem;">
+                        <li><strong>It does not create free energy.</strong> The claim that the coil can "boost any electricity source into 5 times more" is not how electromagnetism works. A coil shapes and transfers energy; it does not manufacture it.</li>
+                        <li><strong>It does not cut your bill by 80%.</strong> No independent test has produced those numbers. Reviewers report output for LED lights and small devices, not whole-home savings.</li>
+                        <li><strong>It has not been independently engineered or lab-tested.</strong> No independent engineering review of the design appears in the available sources.</li>
+                        <li><strong>It does not include hardware.</strong> The $39 price covers the digital guide only.</li>
+                        <li><strong>The author is a pen name.</strong> The sales letter is credited to “Michael Garnett,” which the seller states is a pen name used to keep the author anonymous.</li>
+                    </ul>
+                </div>
+                
+                <div class="caveat-box box-green bg-white">
+                    <h3>What it may reasonably do:</h3>
+                    <ul class="check-list" style="margin-top: 1.5rem;">
+                        <li>Teach you how a coil-based circuit works through hands-on assembly.</li>
+                        <li>Provide a small, steady supplemental power source for very low-draw devices.</li>
+                        <li>Serve as an educational project for someone interested in electronics and the history of electrical engineering.</li>
+                    </ul>
+                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                        <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>The bottom line:</strong> The Energy Revolution System is a real digital guide for a real DIY electronics project. You pay $39, receive a real guide, and ClickBank enforces a 60-day refund window. Judge it as a hobbyist’s educational project with very modest supplemental output, not as a path to energy independence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Build Timeline -->
+    <section id="timeline" class="py-section bg-white">
+        <div class="container grid-2">
+            <div>
+                <h2>How the Project Unfolds</h2>
+                <p style="margin-bottom: 2rem;">This is not a supplement you swallow. It is a build. Here is what the process actually looks like.</p>
+                
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h4 style="color: var(--primary);">Sourcing and Prep</h4>
+                        <p style="margin-bottom: 0;">You download the guide, review the parts list, and source materials locally. Copper wire, magnets, and simple housing components are the core purchases. Budget a few hours for shopping, and expect the total to land somewhere between $50 and $200 depending on your build.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h4 style="color: var(--primary);">The Build</h4>
+                        <p style="margin-bottom: 0;">Frame assembly and magnet placement are straightforward. <strong>Coil winding is the critical step</strong>—it requires patience and precision. Build time varies widely: some report 3-6 hours, others a full weekend or longer.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h4 style="color: var(--primary);">Testing and Tuning</h4>
+                        <p style="margin-bottom: 0;">You connect the device, measure output, and troubleshoot. Misalignment of magnetic components is the most common cause of unstable output. You'll learn what the device can and cannot power (mostly small devices and LEDs).</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h4 style="color: var(--primary);">The Honest Check-In</h4>
+                        <p style="margin-bottom: 0;">If it is not producing usable output and you cannot troubleshoot it, the 60-day refund window is open. If you do not enjoy the build process, the modest output will not justify the effort.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: var(--bg-alt); padding: 3rem; border-radius: var(--radius);">
+                <h3 style="margin-bottom: 2rem;">What Changes When You Build It</h3>
+                
+                <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+                    <div style="font-size: 1.5rem;">🔌</div>
+                    <div>
+                        <h5 style="margin-bottom: 0.25rem;">A few small devices off the grid.</h5>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">Your router, modem, or a string of LED lights run on your build instead of the utility. The savings are modest, but measurable.</p>
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+                    <div style="font-size: 1.5rem;">🛠️</div>
+                    <div>
+                        <h5 style="margin-bottom: 0.25rem;">A skill you did not have before.</h5>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">You understand coil winding, magnetic alignment, and basic circuit behavior in a way that reading about them never delivers.</p>
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+                    <div style="font-size: 1.5rem;">🔋</div>
+                    <div>
+                        <h5 style="margin-bottom: 0.25rem;">A backup for the smallest essentials.</h5>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">During an outage, the device can keep a phone charger or a modem running—not a refrigerator or a space heater.</p>
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem;">
+                    <div style="font-size: 1.5rem;">📚</div>
+                    <div>
+                        <h5 style="margin-bottom: 0.25rem;">A clearer filter for marketing.</h5>
+                        <p style="font-size: 0.95rem; margin-bottom: 0;">After building one, you can look at the next “free energy” pitch and know exactly what questions to ask.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews / Real Talk -->
+    <section class="py-section bg-dark">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
+                <h2>What People Actually Say</h2>
+                <p>A note on reviews: The product’s Trustpilot rating sits at 3.2 out of 5, with critical reviews centered on the gap between the “80% savings” promise and what the device actually delivers. The themes below are drawn from published independent reviews and user reports.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="review-quote">
+                    <p>"A low-cost DIY learning project and possible supplemental-power experiment—not a magic device that eliminates a household electricity bill."</p>
+                    <span class="review-source">— Independent Reviewer Conclusion</span>
+                </div>
+                <div class="review-quote">
+                    <p>"It works, but output is limited to LED lights and small devices."</p>
+                    <span class="review-source">— Common Tester Report</span>
+                </div>
+                <div class="review-quote">
+                    <p>"The instructions were somewhat hard to follow. I’m still not sure what I’m supposed to build."</p>
+                    <span class="review-source">— Verified Buyer Report</span>
+                </div>
+                <div class="review-quote">
+                    <p>"A legitimate product sold with deceptive-feeling marketing."</p>
+                    <span class="review-source">— Independent Investigation Conclusion</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-section bg-alt">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
+                <h2>Start Your Build With the Energy Revolution System</h2>
+                <p>This is a digital product. No hardware ships. You source materials separately (roughly $50–$200 depending on build size). The sales page’s “80% savings” and “5x output” claims are not supported by independent testing.</p>
+            </div>
+
+            <div class="pricing-box">
+                <div class="pricing-badge">INSTANT DIGITAL ACCESS</div>
+                
+                <h3 style="margin-bottom: 0.5rem; font-size: 1.75rem;">Energy Revolution System</h3>
+                <p class="text-light" style="margin-bottom: 0;">Digital Blueprint + Video Tutorials</p>
+                
+                <div class="price-wrap">
+                    <span class="price-strike">$149</span>
+                    <span class="price">$39</span>
+                </div>
+                <p style="font-size: 0.9rem; font-weight: 600; color: var(--primary);">One-Time Payment</p>
+                
+                <ul class="check-list pricing-list">
+                    <li>Main PDF blueprint with step-by-step instructions</li>
+                    <li>Diagrams and schematics</li>
+                    <li>Parts and materials list</li>
+                    <li>Video tutorials</li>
+                    <li>60-day money-back guarantee through ClickBank</li>
+                </ul>
+
+                <a href="order.html" class="btn btn-primary btn-block">Order Now</a>
+                
+                <div style="margin-top: 2rem; text-align: left; padding: 1.5rem; background: var(--bg-alt); border-radius: var(--radius); border: 1px solid var(--border-color);">
+                    <h5 style="margin-bottom: 0.5rem; font-size: 1rem;">What you will still need to buy:</h5>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem; font-size: 0.9rem; color: var(--text-body);">
+                        <li>Insulated copper wire</li>
+                        <li>Magnets</li>
+                        <li>Housing components</li>
+                        <li>Basic tools (wire cutters, pliers, screwdriver)</li>
+                    </ul>
+                    <p style="font-size: 0.85rem; margin-top: 1rem; margin-bottom: 0;"><em>Note: Optional upsells (OTOs) may appear at checkout. You do not need them to build the core project.</em></p>
+                </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="guarantee-box" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div style="flex-shrink: 0; text-align: center;">
+                    <div class="placeholder-img" style="width: 150px; height: 150px; border-radius: 50%; padding: 1rem; font-size: 0.8rem;">
+                        [60-Day Guarantee Seal]
+                    </div>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">The 60-Day Money-Back Promise</h3>
+                    <p style="margin-bottom: 0.5rem;">Plenty of DIY guides overpromise and let buyers down. The Energy Revolution System is backed by a 60-day refund window through ClickBank, which is the main reason the financial risk is low.</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">You have 60 days from purchase to request a refund by email. ClickBank enforces the guarantee. <em>Note: The refund covers the $39 purchase price of the digital guide, not the cost of materials you bought for the build.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-section bg-white">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center mb-2">
+                <h2>Straight Talk & FAQ</h2>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is this a scam?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        It is not a scam in the strict sense: you pay $39, you receive a real digital guide, and ClickBank backs the purchase with a 60-day refund window. It is also not a proven energy solution: the “80% savings” claim is unsupported, the mechanism description conflicts with conservation of energy, and no independent engineering review exists. The honest label is “real guide, misleading marketing.”
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can it really cut my bill by 80%?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        No. Independent reviewers who tested the device report output limited to LED lights and small devices. There is no published meter reading or utility bill showing an 80% reduction.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is the realistic material cost?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Independent estimates range from $50–$70 for a basic build to $200 depending on the version, components, and tools you already own.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Does it violate the laws of physics?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        The claim that the coil can “boost any electricity source into 5 times more” would require output exceeding input, which conservation of energy does not permit. The guide, when treated as instructions for a <em>supplemental circuit</em> powered by a battery or another input, is ordinary electronics.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is the Tesla story real?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Tesla’s bifilar coil patent is real and public (U.S. Patent No. 512,340), but it describes a winding method for electromagnets—not a generator or a free-energy device.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is it safe?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Working with electrical components carries real risks. If you are not comfortable with basic wiring, do not attempt the build. Always check local regulations before any home alteration.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <h3 style="margin-bottom: 1rem;">Build It, Measure It, Decide for Yourself</h3>
+                <p>The Energy Revolution System is not a miracle and it is not a scam. It is a $39 blueprint for a real DIY electronics project with very modest supplemental output, backed by a real refund window. If you want your power bill to disappear without building anything, it is not that—and no guide at this price is.</p>
+                <a href="#pricing" class="btn btn-primary" style="margin-top: 1rem;">Order the Blueprint Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="#what-it-is">What It Is</a>
+                <a href="#caveat">Honest Caveat</a>
+                <a href="#timeline">Build Timeline</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> This product is a digital DIY guide, not a finished generator. It does not create free energy, eliminate electricity bills, or replace grid power. The sales page’s output and savings claims are not supported by independent testing. The author is credited under a pen name. Results vary based on build quality, components, and load.</p>
+                <p>Working with electrical components carries risk; consult a licensed electrician and local authorities before any home electrical alteration. Testimonials and reported themes reflect individual experiences and are not intended to represent typical results. Pricing and refund terms should be confirmed against the official Energy Revolution System website at the time of purchase. This page presents both the commercial terms and the engineering limitations so you can decide with clear eyes. It is not electrical advice.</p>
+                <p class="text-center" style="margin-top: 2rem;">© 2026 Energy Revolution System.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuBtn.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu on click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuBtn.textContent = '☰';
+            });
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const isActive = question.classList.contains('active');
+                
+                // Close all others
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+                
+                // Open clicked
+                if (!isActive) {
+                    question.classList.add('active');
+                    const answer = question.nextElementSibling;
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
